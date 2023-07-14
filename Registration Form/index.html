@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="fcontainer">
+    <div class="d0">
+      <h1 style="justify-self: center; color: seagreen;">Student Registration Form</h1>
+      <br><br>
+    </div>
+    <form>
+
+      <div id="d1">
+        <label>First Name:</label>
+        <input type="text" id="firstName" name="firstName" required><br><br>
+      </div>
+      <div id="d1">
+        <label>Middle Name:</label>
+        <input type="text" id="middleName" name="middleName"><br><br>
+      </div>
+      <div id="d1">
+        <label>Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required><br><br>
+      </div>
+      
+      <div id="d3">
+        <label>Address:</label>
+        <textarea id="address" name="address" required></textarea><br><br>
+      </div>
+      <div id="d1">
+        <label>Phone No.:</label>
+        <input type="tel" id="phoneNo" name="phoneNo" required><br><br>
+      </div>
+
+      <div id="d2">
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label>Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label>Female</label>
+        <br><br>
+      </div>
+
+      <div id="d1">
+        <label>Email ID:</label>
+        <input type="email" id="email" name="email" required><br><br>
+      </div>
+
+      <div id="d1">
+        <label>City:</label>
+        <input type="text" id="city" name="city" required><br><br>
+      </div>
+
+      <div id="d4">
+        <label>Hobbies:</label>
+        <input type="checkbox" id="hobby1" name="hobbies" value="hobby1">
+        <label for="hobby1">Reading</label>
+        <input type="checkbox" id="hobby2" name="hobbies" value="hobby2">
+        <label for="hobby2">Singing</label>
+        <input type="checkbox" id="hobby3" name="hobbies" value="hobby3">
+        <label for="hobby3">Dancing</label><br><br>
+      </div>
+      <div id="d1">
+        <label>State:</label>
+        <input type="text" id="state" name="state" required><br><br>
+      </div>
+      <div id="d1">
+        <label>Country:</label>
+        <input type="text" id="country" name="country" required><br><br>
+      </div>
+      <div id="d5">
+        <label>College Name:</label>
+        <select id="collegeName" name="collegeName" required>
+          <option value="">Select College</option>
+          <option value="MSU Vadodara">MSU Vadodara</option>
+          <option value="Parul University Vadodara">Parul University Vadodara</option>
+          <option value="NIT Surat">NIT Surat</option>
+        </select><br><br>
+      </div>
+      <div id="d6">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>

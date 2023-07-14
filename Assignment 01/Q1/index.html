@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .div1 {
+            position: absolute;
+            display: inline-block;
+            height: 100%;
+            top: 50%;
+        }
+        
+        .div2 {
+            border-right: 2px solid black;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1">
+        <details>
+            <summary style="list-style-type: none;">Mobile accessories</summary>
+            <ul style="list-style: none;">
+                <li><a href="">Charger</a></li>
+                <li><a href="">Cables</a></li>
+                <li><a href="">Ear phones</a></li>
+                <li><a href="">Phone Cover</a></li>
+            </ul>
+        </details>
+        <details>
+            <summary style="list-style-type: none;">TVs</summary>
+            <ul style="list-style: none">
+                <li><a href="">LCDs</a></li>
+                <li><a href="">OLEDs</a></li>
+                <li><a href="">QLEDs</a></li>
+                <li><a href="">Smart TVs</a></li>
+            </ul>
+        </details>
+        <details>
+            <summary style="list-style-type: none;">Clothing</summary>
+            <ul style="list-style: none">
+                <li><a href="">Pants</a></li>
+                <li><a href="">Shirts</a></li>
+                <li><a href="">T-Shirts</a></li>
+                <li><a href="">Joggers</a></li>
+            </ul>
+        </details>
+    </div>
+    <div class="div2">
+        Price
+        <input type="radio" name="brand" value="A"><label>Under 1000</label><br>
+        <input type="radio" name="brand" value="B"><label>1000-5000</label><br>
+        <input type="radio" name="brand" value="C"><label>More Than 5000</label><br>
+        Brands
+        <br>
+        <input type="checkbox" name="brand" value="A"><label>A</label><br>
+        <input type="checkbox" name="brand" value="B"><label>B</label><br>
+        <input type="checkbox" name="brand" value="C"><label>C</label><br>
+    </div>
+</body>
+
+</html>

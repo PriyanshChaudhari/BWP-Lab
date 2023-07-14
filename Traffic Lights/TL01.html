@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            @keyframes tl_1 {
+                0% {background-color: red;}
+                100% {background-color: white;}
+            }
+            @keyframes tl_2 {
+                0% {background-color: white;}
+                100% {background-color: yellow;}
+            }
+            @keyframes tl_3 {
+                0% {background-color: white;}
+                100% {background-color: green;}
+            }
+
+            #outer_border{
+                position: relative;
+                left:45%;
+                border: 3px solid black;
+                width: min-content;
+                padding: 10px 10px;
+                align-items: center;
+            }
+            .circle1{
+                width: 50px;
+                height: 50px;
+                border-radius: 25px;
+                border: 3px solid black;
+                margin: 10px;
+            }
+            .count{
+                border: 3px solid black;
+                height: 50px;
+            }
+            #count_1{
+                margin: 2px 15px;
+                font-size: 40px;
+            }
+            #redlight{
+                background-color: red;
+                animation-name: tl_1;
+                animation-duration: 5s;
+            }
+            #yellowlight{
+                background-color: yellow;
+                animation-name: tl_1;
+                animation-duration: 5s;
+                animation-delay: 10s;
+            }
+            #greenlight{
+                background-color: green;
+                animation-name: tl_1;
+                animation-duration: 5s;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="outer_border">
+            <div class="count"><h1 id="count_1">60</h1></div>
+            <div class="circle1" id="redlight"></div>
+            <div class="circle1" id="yellowlight"></div>
+            <div class="circle1" id="greenlight"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,171 @@
+#row1 {
+  width: 100%;
+  position: fixed;
+  background-color: #0098db;
+  display: inline;
+}
+.row1 {
+  margin-top: -0.71325%;
+  margin-left: -0.855%;
+}
+.nav1 {
+  display: inherit;
+  margin: 5px 0px 10px -5px;
+  padding: 0 15px;
+}
+
+.nav1 a{
+  color: white;
+  text-decoration: none;
+}
+
+.nav2 {
+  display: inherit;
+  margin: 5px 0 0 -5px;
+  padding: 0 15px;
+}
+.nav1a nav1a1 {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: 0px 5px;
+}
+
+.nav1a::after {
+  font-weight: bold;
+  content: " | ";
+}
+
+.nav2a {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: 0px 5px;
+}
+
+#row1col1nav1 {
+  float: left;
+}
+#row1col2nav2 {
+  float: right;
+}
+
+#row2 {
+  height: 150px;
+  margin-top: 27.3px;
+  position: fixed;
+  width: 100%;
+}
+.row2 {
+  margin-left: -0.855%;
+}
+.mslogo {
+  position: absolute;
+  width: min-content;
+  margin-left: 5%;
+  margin-top: 1.5%;
+}
+#mslogoimg {
+  width: auto;
+  height: 100px;
+}
+.naaclogo {
+  position: absolute;
+  height: 150px;
+  left: 85%;
+  margin-top: 1.5%;
+}
+#naaclogoimg {
+  width: auto;
+  height: 100px;
+}
+.mstitle {
+  margin-top: 2%;
+  position: fixed;
+  left: 13%;
+}
+#t1 {
+  padding-bottom: 0%;
+  margin-bottom: 0%;
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: Calibri;
+  text-transform: uppercase;
+}
+#t2 {
+  padding-top: 0%;
+  margin-top: 1.5%;
+  color: orange;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: Calibri;
+  text-transform: uppercase;
+}
+
+.row3{
+  margin-left: -0.855%;
+}
+
+#row3{
+  height: 50px;
+  margin-top: 177.5px;
+  position: fixed;
+  width: 100%;
+  background-color: #202C45;
+  display: inline;
+  align-items: center;
+}
+
+.nav3{
+  display: inherit;
+  margin: 5px 0 0 -5px;
+  padding: 0 15px;
+  align-items: center;
+  list-style-type: none;
+}
+
+.nav3li{
+  display: inline;
+}
+
+.nav3a{
+  align-items: center;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: 0px 5px;
+}
+
+.row4{
+  margin-left: -0.855%;
+}
+
+#row4{
+  height: 50px;
+  margin-top: 222px;
+  position: fixed;
+  width: 100%;
+  display: inline;
+  align-items: center;
+}
+
+.row4col1 img{
+  align-items: center;
+  max-width: 100%;
+  height: 380px;
+}
+
+.row5{
+  margin-left: -0.855%;
+}
+
+#row5{
+  height: 50px;
+  margin-top: 600px;
+  position: fixed;
+  width: 100%;
+  background-color: #202C45;
+  display: inline;
+  align-items: center;
+}

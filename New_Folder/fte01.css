@@ -1,0 +1,203 @@
+* {
+  padding: 0%;
+  margin: 0%;
+}
+
+table {
+  border: 1px dashed gray;
+}
+
+table tr {
+  width: 100%;
+}
+
+/* rblue bg header */
+.r1t1 {
+  background-color: #0098db;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  width: 100%;
+}
+
+.navlinks {
+  float: left;
+  padding-left: 1vb;
+  padding-right: 1vb;
+}
+
+.navlinks td {
+  padding-left: 1vb;
+  padding-right: 1vb;
+}
+
+.navlinks a {
+  color: white;
+  text-decoration: none;
+}
+
+.navicons {
+  float: right;
+  padding-left: 2vb;
+  padding-right: 2vb;
+}
+
+.navicons td {
+  padding-left: 2vb;
+  padding-right: 2vb;
+}
+
+.navicons a i {
+  color: white;
+}
+
+/* logo row */
+.r2t1 {
+  width: 100%;
+  padding-top: 2vh;
+  padding-bottom: 1vh;
+}
+
+.r2t1c1 img {
+  padding-left: 10vb;
+}
+
+.r2t1c3 img {
+  padding-right: 10vb;
+  float: right;
+}
+
+/* dark blue bg nav panel */
+.r3t1 {
+  width: 100%;
+  background-color: #202c45;
+}
+
+.r3t1 td {
+  padding-top: 1vh;
+  padding-left: 1vh;
+  padding-bottom: 1vh;
+  color: white;
+}
+
+/* about faculty */
+.r6t1 {
+  background-color: #364157;
+  padding-left: 2vb;
+  padding-top: 4vh;
+  padding-bottom: 4vh;
+}
+
+.r6t1c1 h2 {
+  color: white;
+  padding-bottom: 5vh;
+}
+
+.r6t1c1 div {
+  text-align: justify;
+  color: white;
+  font-size: medium;
+  padding-bottom: 2vh;
+}
+
+.r6t1c1 a {
+  color: white;
+  text-decoration: none;
+}
+
+.r6t1c1 h4 {
+  padding-bottom: 8vh;
+}
+
+.r6t1c1 button {
+  color: white;
+  font-size: medium;
+  background-color: #0098db;
+  border-style: none;
+  width: max-content;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  padding-left: 2vb;
+  padding-right: 2vb;
+  border-radius: 5px;
+}
+
+/* news and events */
+.r7subr1c1t1, .r7subr2c1t1, .r7subr3c1t1{
+  margin-left: 10vb;
+}
+
+.v-btn {
+  color: white;
+  font-size: medium;
+  background-color: #0098db;
+  border-style: none;
+  width: max-content;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  padding-left: 2vb;
+  padding-right: 2vb;
+  border-radius: 5px;
+}
+
+/* 2 news div */
+.r7subr2c1t1 img ,.r7subr3c1t1 img{
+  padding-left: 2vb;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  padding-right: 2vb;
+  width: 120px;
+  height: 150px;
+}
+
+/* our departments 4 img */
+.r8{
+  background-color: #f7f7f7;
+}
+
+.r8t1{
+  margin-left: 10vb;
+}
+
+
+.r8t1r2t1{
+  margin-left: 10vb;
+  background-color: #f7f7f7;
+}
+
+.r8t1r2t1 td{
+  padding-right: 1vb;
+  padding-bottom: 10vh;
+  font-size: larger;
+  background-color: #fff;
+}
+
+/* notifications and circulars */
+.r9{
+  width: 100%;
+}
+
+.r9t1{
+  margin-left: 10vb;
+}
+
+.r9t1r1 td,.r9t1r2 td, .r9t1r3 td{
+  width: 50%;
+  padding-left: 10vb;
+  padding-bottom: 4vb;
+}
+
+.r9t1r2 td, .r9t1r3 td{
+  border: 1px solid gray;
+  border-left: 6px solid #0098db;
+}
+
+.r10{
+  width: 100%;
+}
+
+.r10t1{
+  background-color: rgba(17, 17, 17, 0.9);
+}
+
+
+
