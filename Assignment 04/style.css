@@ -256,5 +256,162 @@
 
 .news-event-div{
     display: flex;
+    justify-content: space-between;
     margin: 2% 5%;
+}
+
+.newsdiv{
+    font-size: x-large;
+    display: flex;
+}
+
+.newsdiv div{
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.newsdiv h3 a{
+    padding: 2%;
+    text-decoration: none;
+    font-size: small;
+    color: white;
+}
+
+.eventdiv{
+    font-size: x-large;
+    display: flex;
+}
+
+.eventdiv h3{
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.eventdiv h3 a{
+    padding: 2%;
+    text-decoration: none;
+    font-size: small;
+    color: white;
+}
+
+.count-sec{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(32, 44, 69, 0.9);
+    padding: 0% 10%;
+}
+
+.count-sec-div1{
+    display: flex;
+    justify-content: space-around;
+}
+
+.csd1{
+    display: flex;
+    color: white;
+    padding: 2% 5%;
+    justify-content: space-around;
+}
+
+.csd1sub1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.csd1sub1 h2{
+    font-size: x-large;
+}
+
+.csd1sub1 h5{
+    font-size: small;
+}
+
+.our-acdmcs-div{
+    padding-left: 5%;
+    padding-top: 2%;
+    padding-bottom: 5%;
+}
+
+.oa-cat-ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.oa-cat-ul li{
+    padding: 2% 2%;
+}
+
+.oa-cat-ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.oa-gallery{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.oagd1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+.oagd1 img{
+    width: 270px;
+    height: 170px;
+}
+
+.oagd1 a{
+    text-decoration: none;
+    color: black;
+}
+
+.vid-sec-div{
+    background-color: rgba(32, 44, 69, 0.9);
+    display: flex;
+    align-items: center;
+    padding: 2% 2%;
+}
+
+.vid-div{
+    display: flex;
+    padding-right: 2%;
+}
+
+.vid-div video{
+    width: 620px;
+    height: 340px;
+}
+
+.txt-div6{
+    
+}
+
+.txt-div6 h3{
+    color:#5f5d5d;
+    font-size: x-large;
+    margin-bottom: 1%;
+}
+
+.txt-div6 h4{
+    text-transform: uppercase;
+    color: white;
+    font-size: x-large;
+    margin-bottom: 2%;
+}
+
+.txt-div6 p{
+    color: white;
+    margin-bottom: 2%;
+}
+
+.txt-div6 a{
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    padding: 1% 1%;
 }

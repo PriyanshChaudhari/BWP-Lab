@@ -1,63 +1,35 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 
 <head>
-    <style>
-        .div1 {
-            position: absolute;
-            display: inline-block;
-            height: 100%;
-            top: 50%;
-        }
-        
-        .div2 {
-            border-right: 2px solid black;
-            position: absolute;
-        }
-    </style>
+    <title>Sidebar</title>
 </head>
 
 <body>
-    <div class="div1">
-        <details>
-            <summary style="list-style-type: none;">Mobile accessories</summary>
-            <ul style="list-style: none;">
-                <li><a href="">Charger</a></li>
-                <li><a href="">Cables</a></li>
-                <li><a href="">Ear phones</a></li>
-                <li><a href="">Phone Cover</a></li>
-            </ul>
-        </details>
-        <details>
-            <summary style="list-style-type: none;">TVs</summary>
-            <ul style="list-style: none">
-                <li><a href="">LCDs</a></li>
-                <li><a href="">OLEDs</a></li>
-                <li><a href="">QLEDs</a></li>
-                <li><a href="">Smart TVs</a></li>
-            </ul>
-        </details>
-        <details>
-            <summary style="list-style-type: none;">Clothing</summary>
-            <ul style="list-style: none">
-                <li><a href="">Pants</a></li>
-                <li><a href="">Shirts</a></li>
-                <li><a href="">T-Shirts</a></li>
-                <li><a href="">Joggers</a></li>
-            </ul>
-        </details>
-    </div>
-    <div class="div2">
-        Price
-        <input type="radio" name="brand" value="A"><label>Under 1000</label><br>
-        <input type="radio" name="brand" value="B"><label>1000-5000</label><br>
-        <input type="radio" name="brand" value="C"><label>More Than 5000</label><br>
-        Brands
-        <br>
-        <input type="checkbox" name="brand" value="A"><label>A</label><br>
-        <input type="checkbox" name="brand" value="B"><label>B</label><br>
-        <input type="checkbox" name="brand" value="C"><label>C</label><br>
-    </div>
+    <table style="width: 50%;border: 1px solid black;">
+        <tr>
+            <td style="border-right: 1px solid black;width:50%;">
+                <b>Computer & Accessories</b>
+                <ul>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Components</a></li>
+                    <li><a href="#">Desktops</a></li>
+                    <li><a href="#">External Devices & Data Storage</a></li>
+                    <li><a href="#">Laptops</a></li>
+                </ul>
+                <b>Price</b>
+                <ul>
+                    <li><a href="#">Under &#8377;1000</a></li>
+                    <li><a href="#">&#8377;1000-&#8377;5000</a></li>
+                    <li><a href="#">&#8377;5000-&#8377;10000</a></li>
+                    <li><a href="#">&#8377;10000-&#8377;20000</a></li>
+                    <li><a href="#">Over &#8377;20000</a></li>
+                </ul>
+            </td>
+            <td>
+            </td>
+        </tr>
+    </table>
 </body>
 
 </html>
