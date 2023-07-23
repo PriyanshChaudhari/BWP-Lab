@@ -83,7 +83,7 @@
                         <div class=""><input type="text" name="" id=""></div>
                         <div class=""><input type="text" name="" id=""></div>
                         <div class=""><input type="text" name="" id=""></div>
-                        <div class=""><input type="text" name="" id=""></div>
+                        <div class=""><input type="number" name="" id=""></div>
                     </div>
                 </div>
                 <div class="row">
@@ -137,26 +137,80 @@
                     <div class="row ms-2">Days/Hours Available to Work:</div>
                     <div class="row ms-1">
                         <div class="col">
-                            <div class="row">No Pref___</div>
+                            <div>
+                                <input type="checkbox" name="No Pref" id="">
+                                <label for="No Pref">No Pref</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="Mon" id="">
+                                <label for="Mon">Mon</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="Tue" id="">
+                                <label for="Tue">Tue</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="Wed" id="">
+                                <label for="Wed">Wed</label>
+                            </div>
+
+                            <!-- <div class="row">No Pref___</div>
                             <div class="row">Mon_______</div>
                             <div class="row">Tue_______</div>
-                            <div class="row">Wed_______</div>
+                            <div class="row">Wed_______</div> -->
                         </div>
                         <div class="col">
-                            <div class="row">Thur____</div>
+                            <div>
+                                <input type="checkbox" name="Thur" id="">
+                                <label for="Thur">Thur</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="Fri" id="">
+                                <label for="Fri">Fri</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="Sat" id="">
+                                <label for="Sat">Sat</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="Sun" id="">
+                                <label for="Sun">Sun</label>
+                            </div>
+
+
+                            <!-- <div class="row">Thur____</div>
                             <div class="row">Fri_____</div>
                             <div class="row">Sat_____</div>
-                            <div class="row">Sun_____</div>
+                            <div class="row">Sun_____</div> -->
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row border-bottom border-black">
-                <div class="col-6">How many hours can you work weekly?</div>
-                <div class="col-6 border-start border-black">Can you work nights?</div>
+                <div class="col-6">
+                    <div class="d-flex flex-row">
+                        <div>How many hours can you work weekly?</div>
+                        <div><input type="number" name="" id=""></div>
+                    </div>
+                    </div>
+                <div class="col-6 border-start border-black">
+                    <div class="d-flex flex-row">
+                        <div>Can you work nights?</div>
+                        <div><input type="text" name="" id=""></div>
+                    </div>
+                    </div>
             </div>
             <div class="row border-bottom border-black">
-                <div class="row">Employment Desired:</div>
+                <div class="row">
+                    <div class="d-flex flex-row">
+                        <div>Employment Desired:</div>
+                        <div>
+                            <input type="radio" name="Employment Desired" id="">
+                            <input type="radio" name="Employment Desired" id="">
+                            <input type="radio" name="Employment Desired" id="">
+                        </div>
+                    </div>
+                    </div>
                 <div class="row">
                     <div class="col-2"></div>
                     <div class="col">FULL-TIME ONLY</div>
@@ -164,14 +218,20 @@
                     <div class="col">FULL-OR PART-TIME</div>
                 </div>
             </div>
-            <div class="row border-bottom border-black">When available for work?</div>
+            <div class="row border-bottom border-black">
+                <div class="d-flex flex-row">
+                    <div>When available for work?</div>
+                    <div><input type="text" name="" id=""></div>
+                </div>
+               </div>
             <div id="gray-bg" class="row border-bottom border-black text-center">
                 <div><strong>EDUCATION & OTHER INFORMATION</strong></div>
             </div>
 
             <div class="row border-bottom border-black">
                 <div class="col">TYPE OF SCHOOL</div>
-                <div class="col border-start border-black">NAME OF SCHOOL</div>
+                <div class="col border-start border-black">
+                    NAME OF SCHOOL</div>
                 <div class="col border-start border-black">LOCATION (Complete mailing address)</div>
                 <div class="col border-start border-black">NO. OF YEARS</div>
                 <div class="col border-start border-black">MAJOR & DEGREE</div>
@@ -185,10 +245,10 @@
             </div>
             <div class="row border-bottom border-black">
                 <div class="col">&nbsp;</div>
-                <div class="col border-start border-black"></div>
-                <div class="col border-start border-black"></div>
-                <div class="col border-start border-black"></div>
-                <div class="col border-start border-black"></div>
+                <div class="col border-start border-black"><input type="text" name="" id=""></div>
+                <div class="col border-start border-black"><textarea name="edu-location" id="" cols="20" rows="2"></textarea></div>
+                <div class="col border-start border-black"><input type="number" name="" id=""></div>
+                <div class="col border-start border-black"><input type="text" name="" id=""></div>
             </div>
             <div id="gray-bg" class="row border-bottom border-black">
                 <div class="col">College</div>
@@ -199,10 +259,10 @@
             </div>
             <div class="row border-bottom border-black">
                 <div class="col">&nbsp;</div>
-                <div class="col border-start border-black"></div>
-                <div class="col border-start border-black"></div>
-                <div class="col border-start border-black"></div>
-                <div class="col border-start border-black"></div>
+                <div class="col border-start border-black"><input type="text" name="" id=""></div>
+                <div class="col border-start border-black"><textarea name="edu-location" id="" cols="20" rows="2"></textarea></div>
+                <div class="col border-start border-black"><input type="number" name="" id=""></div>
+                <div class="col border-start border-black"><input type="text" name="" id=""></div>
             </div>
             <div id="gray-bg" class="row border-bottom border-black">
                 <div class="col">Bus. or Trade School</div>
@@ -213,10 +273,10 @@
             </div>
             <div class="row border-bottom border-black">
                 <div class="col">&nbsp;</div>
-                <div class="col border-start border-black"></div>
-                <div class="col border-start border-black"></div>
-                <div class="col border-start border-black"></div>
-                <div class="col border-start border-black"></div>
+                <div class="col border-start border-black"><input type="text" name="" id=""></div>
+                <div class="col border-start border-black"><textarea name="edu-location" id="" cols="20" rows="2"></textarea></div>
+                <div class="col border-start border-black"><input type="number" name="" id=""></div>
+                <div class="col border-start border-black"><input type="text" name="" id=""></div>
             </div>
             <div id="gray-bg" class="row border-bottom border-black">
                 <div class="col">Professional School</div>
@@ -227,10 +287,10 @@
             </div>
             <div class="row">
                 <div class="col">&nbsp;</div>
-                <div class="col border-start border-black"></div>
-                <div class="col border-start border-black"></div>
-                <div class="col border-start border-black"></div>
-                <div class="col border-start border-black"></div>
+                <div class="col border-start border-black"><input type="text" name="" id=""></div>
+                <div class="col border-start border-black"><textarea name="edu-location" id="" cols="20" rows="2"></textarea></div>
+                <div class="col border-start border-black"><input type="number" name="" id=""></div>
+                <div class="col border-start border-black"><input type="text" name="" id=""></div>
             </div>
         </div>
 </body>
