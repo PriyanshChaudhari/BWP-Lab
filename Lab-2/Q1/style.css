@@ -1,0 +1,46 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  border-style: none;
+}
+
+.fcontainer {
+  padding: 2%;
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border: 1px dashed rgb(11, 86, 11);
+}
+
+.fcontainer form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  align-items: center;
+}
+
+#d1 input {
+  margin-left: 1vw;
+  border: 1px solid seagreen;
+}
+
+#d3 textarea {
+  border: 1px solid seagreen;
+}
+
+#d4 input {
+  padding-left: 1%;
+}
+
+#d5 select {
+  border: 1px solid seagreen;
+}
+
+#d6 button {
+  padding: 2%;
+  padding-left: 4%;
+  padding-right: 4%;
+  margin-left: 140%;
+  background-color: seagreen;
+  color: white;
+}

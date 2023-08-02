@@ -1,0 +1,281 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  font-family: "Open Sans", sans-serif;
+}
+
+h2{
+    font-family: "Noto Sans", sans-serif;
+    color: #09141e;
+}
+
+p, ul{
+  color: #333;
+}
+
+.fcontainer1 {
+  display: flex;
+  border-bottom: 1px solid #002c7791;
+}
+
+.menudiv,
+.infodiv,
+.searchdiv {
+  display: flex;
+  align-items: center;
+}
+
+.infodiv {
+  margin-right: 1vw;
+}
+
+.menudiv button,
+.infodiv button,
+.searchdiv button {
+  border-style: none;
+  background-color: #fff;
+  color: #002c77;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: "Noto Sans", sans-serif;
+}
+
+header {
+  border-bottom: 1px solid #002c7791;
+}
+
+.fcontainer2 {
+  display: flex;
+  justify-content: center;
+}
+
+#heading1div h1,
+.marticle h1 {
+  color: #002c77;
+}
+
+#heading1div h1{
+  font-size: 48px;
+}
+
+#heading1div {
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+
+.fcontainer3 {
+  display: flex;
+  flex-direction: column;
+}
+
+.mainimgdiv {
+  z-index: 0;
+  overflow: hidden;
+}
+
+.mainimgdiv img {
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.crosslines {
+  margin-bottom: 2vh;
+  min-height: 20px;
+  max-height: 40px;
+  background-image: url(https://www.hopkinsmedicine.org/assets/images/cyan_lines.png);
+  -webkit-perspective: 1px;
+  perspective: 1px;
+  -webkit-perspective-origin: center;
+  perspective-origin: center;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.marticle {
+  margin-left: 20vw;
+  margin-right: 20vw;
+}
+
+.marticle h1 {
+  font-size: 48px;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+.bitinfo {
+  font-size: larger;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+.ctasec {
+  padding-top: 5vw;
+  padding-bottom: 2vw;
+  padding-left: 4vw;
+  padding-right: 4vw;
+}
+
+.cta-wrap2 {
+  padding: 3vw;
+  background: url(https://www.hopkinsmedicine.org/assets/images/lt_blue_lines.png);
+}
+
+.cta-wrap1 {
+  padding: 4vw;
+  background-color: #00747a;
+}
+
+.what-you-need-to-know {
+  display: flex;
+  margin-left: -4vw;
+  margin-top: -2vw;
+  margin-bottom: 2vw;
+  padding: 1vh;
+  width: max-content;
+  background-color: #333;
+  background: rgba(0, 0, 0, 0.48);
+}
+
+.cta-covid19 {
+  display: flex;
+  margin-left: -1vw;
+  margin-bottom: 2vw;
+  color: white;
+  font-size: x-large;
+}
+
+.cta-txt {
+  color: white;
+}
+
+.cta-txt ul li {
+  padding: 1vw;
+  font-size: larger;
+}
+
+.rtf {
+  margin-top: 2vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rtf h2 {
+  padding-top: 2vw;
+  padding-bottom: 1vw;
+  margin-top: 2vw;
+  margin-bottom: 1vw;
+  font-size: xx-large;
+}
+
+.rtf p,
+.vid-desc p {
+  font-size: medium;
+}
+
+.vid-title-rtf {
+  padding-top: 2vw;
+  padding-bottom: 1vw;
+  margin-top: 2vw;
+  margin-bottom: 1vw;
+  font-size: x-large;
+}
+
+.rtf3-ul {
+  padding: 2vw;
+  margin-left: 2vw;
+  list-style: none;
+}
+
+.rtf3-ul li {
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+
+.rtf3-ul li::before {
+  content: "\2022";
+  color: #00747a;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.footer1 {
+  padding-top: 2vw;
+  background-color: #09141e;
+}
+
+.two-row-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.add-info {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.add-info-links a {
+  color: #6da5c5;
+}
+
+.social-links {
+  display: flex;
+}
+
+.sld1,
+.sld2,
+.sld3,
+.sld4,
+.sld5 {
+  width: 30px;
+  height: 30px;
+  margin-right: 1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sld1 {
+  background: #3b5998;
+}
+.sld2 {
+  background: #00aced;
+}
+.sld3 {
+  background: #007bb6;
+}
+.sld4 {
+  background: #e03566;
+}
+.sld5 {
+  background: #cd201f;
+}
+
+.sld1 a,
+.sld2 a,
+.sld3 a,
+.sld4 a,
+.sld5 a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-copyright {
+  display: flex;
+  justify-content: center;
+}
+
+.copyrightdiv1 {
+  color: white;
+  padding-bottom: 2vw;
+}
