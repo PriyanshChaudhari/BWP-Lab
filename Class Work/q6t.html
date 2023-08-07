@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<style>
+  #container {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    background: yellow;
+    overflow: hidden; /* Ensure circles don't go outside the container */
+  }
+
+  .circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: white;
+  }
+</style>
+<body>
+
+<p><button onclick="myMove()">Click Me</button></p> 
+
+<div id="container">
+</div>
+
+<script>
+function myMove() {
+  const container = document.getElementById("container");
+  const interval = 100; // Time interval in milliseconds
+  const circleCount = 15; // Number of circles to create
+  const maxCircleSize = 30; // Maximum circle size in pixels
+
+  function createCircle() {
+    const circle = document.createElement("div");
+    circle.className = "circle";
+    circle.style.width = `${Math.floor(Math.random() * maxCircleSize) + 10}px`;
+    circle.style.height = circle.style.width;
+    circle.style.left = `${Math.random() * (container.clientWidth - parseInt(circle.style.width))}px`;
+    circle.style.top = "-50px"; // Start above the container
+    container.appendChild(circle);
+    return circle;
+  }
+
+  function animateCircle(circle) {
+    let pos = -50; // Start position above the container
+    const speed = 1 + Math.random() * 3; // Adjust speed for each circle
+    const id = setInterval(frame, interval);
+    
+    function frame() {
+      if (pos >= container.clientHeight) {
+        clearInterval(id);
+        container.removeChild(circle); // Remove the circle when it reaches the bottom
+      } else {
+        pos += speed;
+        circle.style.top = pos + "px";
+      }
+    }
+  }
+
+  for (let i = 0; i < circleCount; i++) {
+    const circle = createCircle();
+    animateCircle(circle);
+  }
+}
+</script>
+
+</body>
+</html>

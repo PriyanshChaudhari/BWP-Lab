@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCII, Vowel & BGC change</title>
+    <style>
+        .bgblue{
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="inp" placeholder="Text Here" onkeyup="keycode(), keyvowel(), bgChange()">
+    <br>
+    <div>
+        Char Code Here: <br>
+        <span id="asciiop"></span>
+    </div>
+    <br>
+    <div>
+        Key Pressed is Vowel or not?
+        <br>
+        <span id="vowelchk"></span>
+    </div>
+
+    <script>
+        function keycode() {
+            let x = document.getElementById("inp").value;
+            for (let i = 0; i < x.length; i++) {
+                document.getElementById("asciiop").innerText = x.charCodeAt(i);
+            }
+        }
+        function keyvowel() {
+            let x = document.getElementById("inp").value;
+            for (let i = 0; i < x.length; i++) {
+                if ("aeiou".includes(x[i])) {
+
+                    document.getElementById("vowelchk").innerText = "Yes it is.";
+                } else {
+
+                    document.getElementById("vowelchk").innerText = "No it is not.";
+                }
+            }
+        }
+        function bgChange() {
+            let x = document.getElementById("inp");
+            x.classList.toggle("bgblue");
+        }
+    </script>
+</body>
+
+</html>

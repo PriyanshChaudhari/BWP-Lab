@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String b/w a's</title>
+</head>
+
+<body>
+    <input type="text" name="str" id="str" placeholder="Write word here">
+    <br>
+    <button type="button" name="btn" onclick="strchk()">Click Here</button>
+    <div id="cmnt"></div>
+    <div id="cmnt1"></div>
+
+    <script>
+        function strchk() {
+            let x = document.getElementById("str").value.toLowerCase();
+            var t1, t2, k = 0;
+            for (let i = 0; i < x.length; i++) {
+                if (x[i] == "a") {
+                    if (k == 0) {
+                        t1 = i;
+                    }
+                    t2 = i;
+                    k++;
+                }
+            }
+            var result = x.substring(t1 + 1, t2);
+            document.getElementById("cmnt").innerText = result;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celcius to Fahrenhit</title>
+</head>
+<body>
+    <input type="number" id="inp">
+    <button type="button" onclick="show_prompt()">Convert to Fahrenhit</button>
+
+    <script type="text/javascript">
+        function show_prompt(){
+            var inp = document.getElementById("inp").value;
+            var f = (inp * 9/5) + 32;
+            document.getElementById("inp").value = f;
+        }
+    </script>
+</body>
+</html>

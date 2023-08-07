@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Username & Password Validation</title>
+</head>
+
+<body>
+    <form name="form1" onsubmit="return validateForm()">
+        UserName:
+        <input type="text" name="Username" id="Username" required placeholder="Username">
+        <br>
+        <br>
+        Password:
+        <input type="password" name="password" id="password" required placeholder="Password">
+        <br>
+        <br>
+        <button type="submit" value="submit">Submit</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            let x = document.forms["form1"]["Username"].value;
+            let y = document.forms["form1"]["password"].value;
+            if ("_@0123456789".includes(x[0])) {
+                alert("Username should not start with '_', '@', or any number.");
+                return false;
+            }
+            if (y.length < 6 || y.length > 12) {
+                alert("Password length should be between 6 and 12 characters.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+</head>
+<body>
+    <h2 id="p1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, consequuntur!</h2>
+    <button id="btn">Click Here</button>
+
+    <script>
+        $(document).ready(function(){
+            var btnclick = "<p>Button is Pressed</p>";
+            $("h2").hover(function(){
+                $(this).css("color","red");
+            }).mouseleave(function(){
+                $(this).css("color","black");
+            })
+            $("#btn").click(function(){
+                $("body").append(btnclick);
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cycle</title>
+    <link rel="stylesheet" href="cycle01.css">
+</head>
+
+<body>
+    <button onclick="myMove()">Click Me</button>
+    <div id="container">
+        <div id="cycle">
+            <svg id="cyclesvg">
+                <line x1="140" y1="5" x2="150" y2="50" style="stroke:gray;stroke-width:2" />
+
+                <line x1="130" y1="5" x2="150" y2="5" style="stroke:gray;stroke-width:2" />
+
+                <line x1="90" y1="20" x2="110" y2="20" style="stroke:gray;stroke-width:2" />
+
+                <line x1="100" y1="20" x2="100" y2="30" style="stroke:gray;stroke-width:2" />
+
+                <polygon points="50,50 100,30 150,30 100, 50" style="fill:none;stroke:gray;stroke-width:2" />
+
+                <circle cx="50" cy="50" r="25" fill="gray" />
+
+                <circle cx="150" cy="50" r="25" fill="gray" />
+            </svg>
+        </div>
+    </div>
+    
+
+    <script>
+        function myMove() {
+            let id = null;
+            const elem = document.getElementById("cycle");
+            let pos = 0;
+            clearInterval(id);
+            id = setInterval(frame, 5);
+            function frame() {
+                if (pos == 1000) {
+                    clearInterval(id);
+                } else {
+                    pos++;
+                    elem.style.left = pos + "px";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

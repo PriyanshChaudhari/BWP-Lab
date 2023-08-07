@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Lights</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="TLtry.css">
+</head>
+
+<body>
+    <button id="btn">Click to Start</button>
+    <div class="container">
+        <div id="timer">
+            <div id="countdown"></div>
+        </div>
+        <div id="red"></div>
+        <div id="yellow"></div>
+        <div id="green"></div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            var red = $("#red");
+            var yellow = $("#yellow");
+            var green = $("#green");
+            var countdown = $("#countdown");
+            var timer = $("#timer");
+            var count = 6;
+            var count2 = 6;
+            var count3 = 4;
+
+            function tl() {
+                setInterval(function () {
+                    if (count > 0) {
+                        red.show();
+                        yellow.hide();
+                        green.hide();
+                        countdown.html(count);
+                        count--;
+                    } else if (count2 > 0) {
+                        yellow.show();
+                        red.hide();
+                        countdown.html(count2);
+                        count2--;
+                    } else if (count3 > 0) {
+                        yellow.hide();
+                        green.show();
+                        countdown.html(count3);
+                        count3--;
+                    }
+                    else{
+                        count = 6;
+                        count2 = 6;
+                        count3 = 4;
+                    }
+                }, 1000);
+                // for (let i = 0; i < 60; i++) {
+                //     if (i < 30) {
+                //         red.show();
+                //         yellow.hide();
+                //         green.hide();
+                //         countdown.html(i);
+                //     } else if (i < 36) {
+                //         yellow.show();
+                //         red.hide();
+                //         countdown.html(i);
+                //     } else {
+                //         yellow.hide();
+                //         green.show();
+                //         countdown.html(i);
+                //     }
+                // }
+            }
+            tl();
+        }
+        )
+    </script>
+</body>
+
+</html>
