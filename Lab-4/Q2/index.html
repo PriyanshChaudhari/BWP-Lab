@@ -1,36 +1,38 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typewriter Effect in Input Field</title>
     <style>
-        @keyframes blinker {
-            50% {
-                opacity: 0;
-            }
-        }
-
-        #demo {
-            animation-delay: 2s;
+        #output {
+            font-family: 'Courier New', monospace;
+            font-size: 40px;
+            border: 2px solid #333;
+            padding: 5px;
         }
     </style>
 </head>
-
 <body>
-
-    <p>A function is triggered when the user releases a key in the input field. The function outputs the actual
-        key/letter that was released inside the text field.</p>
-
-    Enter your name: <input type="text" id="fname" onkeyup="myFunction()">
-
-    <p>My name is: <span id="demo"></span></p>
-
+    <label for="input">Enter Text:</label>
+    <input type="text" id="input">
+    <button type="button" onclick="typeeffect()">Click To Show Effect</button>
+    <br>
+    <br>
+    <div id="output"><br></div>
     <script>
-        function myFunction() {
-            var x = document.getElementById("fname").value;
-            document.getElementById("demo").innerHTML = x;
+        function typeeffect() {
+            const inp = document.getElementById('input').value;
+            let i = 0;
+            function typeChar(){
+                if (i < inp.length) {
+                    document.getElementById('output').innerHTML += inp.charAt(i);
+                    i++;
+                    setTimeout(typeChar, 500);
+                }
+            }
+            typeChar();
         }
     </script>
-
 </body>
-
 </html>

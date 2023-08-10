@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snowfall</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <p><button onclick="myMove()">Click Me</button></p>
+    <div id="container">
+    </div>
+
+    <script>
+        function myMove() {
+            const container = document.getElementById("container");
+            const interval = 100;
+            const circleCount = 15;
+            const maxCircleSize = 20;
+
+            function createCircle() {
+                const circle = document.createElement("div");
+                circle.className = "circle";
+                circle.style.width = `${(Math.random() * maxCircleSize) + 10}px`;
+                circle.style.height = circle.style.width;
+                circle.style.left = `${Math.random() * (container.clientWidth - parseInt(circle.style.width))}px`;
+                circle.style.top = "-50px";
+                container.appendChild(circle);
+                return circle;
+            }
+
+            function animateCircle(circle) {
+                let pos = -50; 
+                const speed = 1 + Math.random() * 3; // Adjust speed for each circle
+                const id = setInterval(frame, interval);
+
+                function frame() {
+                    if (pos >= container.clientHeight) {
+                        clearInterval(id);
+                        container.removeChild(circle); // Remove the circle when it reaches the bottom
+                    } else {
+                        pos += speed;
+                        circle.style.top = pos + "px";
+                    }
+                }
+            }
+
+            for (let i = 0; i < circleCount; i++) {
+                const circle = createCircle();
+                animateCircle(circle);
+            }
+        }
+    </script>
+</body>
+
+</html>

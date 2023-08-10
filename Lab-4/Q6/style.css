@@ -1,0 +1,23 @@
+#container {
+    width: 1000px;
+    height: 600px;
+    /* background-image: url("pexels-jill-wellington-259583.jpg"); */
+    position: relative;
+    background: yellow;
+    background-image: url("pexels-jill-wellington-259583.jpg");
+    background-size: cover;
+    overflow: hidden;
+}
+
+#bg-img{
+    z-index: -1;
+    position: absolute;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: white;
+  }

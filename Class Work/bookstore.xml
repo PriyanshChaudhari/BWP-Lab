@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+
+<bookstore>
+    <book category="abc">
+        <title>abcd</title>
+        <author>cdef</author>
+        <year>2000</year>
+        <price>1000</price>
+    </book>
+</bookstore>
