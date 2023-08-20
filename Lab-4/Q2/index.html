@@ -5,7 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Typewriter Effect in Input Field</title>
     <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
         #output {
+            width: 600px;
+            height: 50px;
             font-family: 'Courier New', monospace;
             font-size: 40px;
             border: 2px solid #333;
@@ -14,12 +22,14 @@
     </style>
 </head>
 <body>
+    <div>
     <label for="input">Enter Text:</label>
     <input type="text" id="input">
     <button type="button" onclick="typeeffect()">Click To Show Effect</button>
+    </div>
+    <!-- <br> -->
     <br>
-    <br>
-    <div id="output"><br></div>
+    <div id="output"></div>
     <script>
         function typeeffect() {
             const inp = document.getElementById('input').value;
