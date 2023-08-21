@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate Font Size</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        div {
+            top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn" type="button">Click to animate</button>
+    <div>Lorem ipsum dolor sit amet.</div>
+
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("div").animate({ fontSize: "100px" });
+            });
+        })
+    </script>
+</body>
+
+</html>
