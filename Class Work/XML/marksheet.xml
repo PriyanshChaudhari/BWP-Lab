@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE marksheet SYSTEM "marksheet.dtd">
+<marksheet>
+    <student>
+        <name> ABC </name>
+        <roll> 1 </roll>
+        <branch> CS </branch>
+        <PRN> 9 </PRN>
+        <marks>
+            <sub1> 10 </sub1>
+            <sub2> 20 </sub2>
+            <sub3> 30 </sub3>
+        </marks>
+    </student>
+</marksheet>

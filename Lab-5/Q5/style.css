@@ -13,18 +13,19 @@
 }
 
 #d1{
-    width: 50px;
+    width: 30px;
     height: 25px;
     background-color: green;
     position: relative;
 }
 
 #d2{
-    width: 75px;
+    width: 50px;
     height: 50px;
     background-color: greenyellow;
     display: flex;
     justify-content: center;
+    z-index: 1;
 }
 
 #d21{
@@ -35,9 +36,10 @@
 }
 
 #d3, #d4{
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 40px;
     background-color: green;
+    margin-top: -25%;
 }
 
 #d3{
@@ -45,7 +47,7 @@
 }
 
 #d4{
-    margin-left: 3px;
+    margin-left: 2px;
 }
 
 #d34{

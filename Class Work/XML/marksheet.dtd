@@ -1,0 +1,13 @@
+<!DOCTYPE marksheet
+[
+    <!ELEMENT marksheet (student*)>
+    <!ELEMENT student (name, roll, branch, PRN, marks)>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT roll (#PCDATA)>
+    <!ELEMENT branch (#PCDATA)>
+    <!ELEMENT PRN (#PCDATA)>
+    <!ELEMENT marks (sub1, sub2, sub3)>
+    <!ELEMENT sub1 (#PCDATA)>
+    <!ELEMENT sub2 (#PCDATA)>
+    <!ELEMENT sub3 (#PCDATA)>
+]>

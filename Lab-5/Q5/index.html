@@ -34,36 +34,54 @@
                     // $("#d4,#d3").animate({ left: "+=10px", height: "-=15px" })
                     // $("#d4,#d3").animate({ left: "+=10px", height: "+=15px" })
                     $("#d21").animate(
-                        { deg: -45 },
+                        { deg: -20 },
                         {
-                            duration: 200,
+                            duration: 250,
                             step: function (now) {
                                 $(this).css({ transform: 'rotate(' + now + 'deg)' });
                             }
                         }
                     );
                     $("#d21").animate(
-                        { deg: +45 },
+                        { deg: +20 },
                         {
-                            duration: 200,
+                            duration: 250,
                             step: function (now) {
                                 $(this).css({ transform: 'rotate(' + now + 'deg)' });
                             }
                         }
                     );
-                    $("#d4, #d3").animate(
-                        { deg: -45 },
+                    $("#d3").animate(
+                        { deg: -20 },
                         {
-                            duration: 200,
+                            duration: 250,
                             step: function (now) {
                                 $(this).css({ transform: 'rotate(' + now + 'deg)' });
                             }
                         }
                     );
-                    $("#d4, #d3").animate(
-                        { deg: 45 },
+                    $("#d3").animate(
+                        { deg: 60 },
                         {
-                            duration: 200,
+                            duration: 250,
+                            step: function (now) {
+                                $(this).css({ transform: 'rotate(' + now + 'deg)' });
+                            }
+                        }
+                    );
+                    $("#d4").animate(
+                        { deg: -60 },
+                        {
+                            duration: 250,
+                            step: function (now) {
+                                $(this).css({ transform: 'rotate(' + now + 'deg)' });
+                            }
+                        }
+                    );
+                    $("#d4").animate(
+                        { deg: 20 },
+                        {
+                            duration: 250,
                             step: function (now) {
                                 $(this).css({ transform: 'rotate(' + now + 'deg)' });
                             }
