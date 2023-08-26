@@ -5,92 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cartoon Animation</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        .sprite {
+            width: 120px;
+            height: 120px;
+            background-image: url('sprite.png');
+            /* background-repeat: no-repeat;
+            background-position-x: -720px; */
+            position: absolute;
+        }
+    </style>
 </head>
 
 <body>
-    <button id="btn" type="button">Click To Animate</button>
-    <div id="container">
-
-        <div id="d1"></div>
-        <div id="d2">
-            <div id="d21"></div>
-        </div>
-        <div id="d34">
-            <div id="d3"></div>
-            <div id="d4"></div>
-        </div>
+    <button id="btn" type="button">Click</button>
+    <div class="sprite">
     </div>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
         $(document).ready(function () {
-            $("button").click(function () {
-                for (let i = 0; i < 3; i++) {
-                    // $("#d1").animate({ left: "-=10px" });
-                    // $("#d1").animate({ left: "+=20px" });
-                    // $("#d2").animate({ width: "-=25px" });
-                    // $("#d2").animate({ width: "+=25px" });
-                    // $("#d4,#d3").animate({ left: "+=10px", height: "-=15px" })
-                    // $("#d4,#d3").animate({ left: "+=10px", height: "+=15px" })
-                    $("#d21").animate(
-                        { deg: -20 },
-                        {
-                            duration: 250,
-                            step: function (now) {
-                                $(this).css({ transform: 'rotate(' + now + 'deg)' });
-                            }
+            var spriteContainer = $('.sprite');
+            $('#btn').click(function () {
+                spriteContainer.animate(
+                    {
+                        backgroundPosition: `-720px`,
+                        duration: 1000,
+                        step: function () {
+                            $.css("transform", `translateX(1000px)`);
                         }
-                    );
-                    $("#d21").animate(
-                        { deg: +20 },
-                        {
-                            duration: 250,
-                            step: function (now) {
-                                $(this).css({ transform: 'rotate(' + now + 'deg)' });
-                            }
-                        }
-                    );
-                    $("#d3").animate(
-                        { deg: -20 },
-                        {
-                            duration: 250,
-                            step: function (now) {
-                                $(this).css({ transform: 'rotate(' + now + 'deg)' });
-                            }
-                        }
-                    );
-                    $("#d3").animate(
-                        { deg: 60 },
-                        {
-                            duration: 250,
-                            step: function (now) {
-                                $(this).css({ transform: 'rotate(' + now + 'deg)' });
-                            }
-                        }
-                    );
-                    $("#d4").animate(
-                        { deg: -60 },
-                        {
-                            duration: 250,
-                            step: function (now) {
-                                $(this).css({ transform: 'rotate(' + now + 'deg)' });
-                            }
-                        }
-                    );
-                    $("#d4").animate(
-                        { deg: 20 },
-                        {
-                            duration: 250,
-                            step: function (now) {
-                                $(this).css({ transform: 'rotate(' + now + 'deg)' });
-                            }
-                        }
-                    );
-                    $("#container").animate({ left: "+=30px" })
-                }
-            })
-        })
+                    }, 6000
+                )
+            });
+        });
+
     </script>
 </body>
 

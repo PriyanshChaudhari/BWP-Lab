@@ -1,0 +1,21 @@
+body{
+    overflow: hidden;
+}
+
+.sprite{
+    background: url("sprite.png");
+    width: 120px;
+    height: 120px;
+    animation: walk 1s steps(6) infinite, forward 6s linear infinite;
+    /* position: absolute; */
+}
+
+@keyframes walk{
+    0%{background-position: 0px;}
+    100%{background-position: -720px;}
+}
+
+@keyframes forward{
+    0%{transform: translateX(-200px);}
+    100%{transform: translateX(1100px);}
+}
