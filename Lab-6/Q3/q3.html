@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <style>
+        th,
+        td {
+            border: 2px solid black;
+            padding: 40px;
+            border-collapse: collapse;
+            text-align: center;
+            font-size: larger;
+        }
+    </style>
+
+</head>
+
+<body onload="loadDoc();" ; style="font-family: Calibri;">
+    <div class="container">
+        <h1 style="text-align: center;">Server Clock</h1>
+        <table style="display: flex; justify-content: center;">
+            <tr>
+                <td colspan="3" style=" border-top-left-radius:50px ; border-top-right-radius:50px;"> <b>Date -</b>
+                    <span id="date">Date</span></td>
+            </tr>
+
+            <tr>
+                <th>Hour </th>
+                <th>Minute</th>
+                <th>Second</th>
+            </tr>
+            <tr>
+                <td style=" border-bottom-left-radius:50px"><span id="hour"></span></td>
+                <td><span id="min"></span></td>
+                <td style="border-bottom-right-radius:50px;"><span id="sec"></span></td>
+
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        function loadDoc() {
+            let Xhttp = new XMLHttpRequest();
+            Xhttp.open("GET", "http://worldtimeapi.org/api/timezone/Asia/Kolkata", true);
+
+            Xhttp.onload = () => {
+                Data = JSON.parse(Xhttp.responseText);
+                hour = Data.datetime.slice(11, 13); // Extracts hours (0-based index)
+                min = Data.datetime.slice(14, 16);
+                sec = Data.datetime.slice(17, 19);
+                date = Data.datetime.slice(0, 10);
+                date = date.split('-').reverse().join('-');
+
+                setInterval(() => {
+                    timer();
+
+                }, 1000);
+            }
+            Xhttp.send();
+        }
+        function timer() {
+            sec++;
+            if (sec == 60) {
+                min++;
+                sec = 0;
+            }
+            else if (min == 60) {
+                hour++;
+                min = 0;
+            }
+            else if (hour == 24) {
+
+                hour = 0;
+            }
+            document.getElementById('hour').innerHTML = hour;
+            document.getElementById('min').innerHTML = min;
+            document.getElementById('sec').innerHTML = sec;
+            document.getElementById('date').innerHTML = date;
+
+        }
+
+
+    </script>
+</body>
+
+</html>

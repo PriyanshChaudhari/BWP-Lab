@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <style>
+        th, td{
+            text-align: center;
+            width: 50%;
+        }
+        .price {
+            border:none;
+            text-align: center;
+            background-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container d-flex flex-column align-items-center justify-content-center">
+        <div class="h1">Live Stock Market</div>
+        <div class="container w-50 d-flex align-items-center justify-content-center">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Company</th>
+                        <th>Stock price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="cname">C1</td>
+                        <td>
+                            <input type="text"class="price" disabled></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cname">C2</td>
+                        <td>
+                            <input type="text"class="price" disabled></input>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function getStockPrice() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "stockprice.json");
+
+            xhr.onload = () => {
+                var data = JSON.parse(xhr.responseText);
+                var inputs = document.querySelectorAll(".price");
+                var cname = document.querySelectorAll(".cname");
+                let count = 0;
+                const intervalID = setInterval(() => {
+                    for(i=0; i<2;i++){
+                        inputs[i].value = data[`c${i+1}`][count];
+                        if (inputs[i].value > data[`c${i+1}`][count-1] && count>0) {
+                            // inputs[i].style.borderColor = "green";
+                            inputs[i].style.color = "green";
+                            // inputs[i].style.backgroundColor = "green";
+                        } else if (inputs[i].value < data[`c${i+1}`][count-1] && count>0){
+                            // inputs[i].style.borderColor = "red";
+                            inputs[i].style.color = "red";
+                            // inputs[i].style.backgroundColor = "red";
+                        }
+                    };
+                    count++;
+                    if (count === 5) {
+                        clearInterval(intervalID);
+                    }
+                }, 4000);
+            }
+            xhr.send();
+        }
+        getStockPrice();
+    </script>
+</body>
+
+</html>

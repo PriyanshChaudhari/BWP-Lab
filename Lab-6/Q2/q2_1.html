@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="q2css.css"> -->
+    <style>
+        input {
+            pointer-events: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        input {
+            border: none;
+            background-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container w-75 d-flex flex-column align-items-center justify-content-center">
+        <div class="h1"><button type="button" onclick="startMatch()">Live Cricket Score</button></div>
+        <div class="container">
+            <div class="container mt-3 overview d-flex align-items-start justify-content-center">
+                <div class=" d-flex flex-column
+                align-items-center justify-content-center">
+                    <div class="h3">Score</div>
+                    <div class="h5"></div>
+                    <div class="d-flex p-3 border border-dark">
+                        <div class="d-flex flex-column"><span>Runs</span>
+                            <input id="teamruns" type="text"></input>
+                            <span>Balls</span>
+                            <input id="teamover" type="text"></input>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <span>Batter 1</span>
+                            <input id="btr1" type="text"></input>
+                            <span>Batter 2</span>
+                            <input id="btr2" type="text"></input>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <span>Bowler(w-r-b)</span>
+                            <input id="blr" type="text"></input>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var teamruns = document.getElementById("teamruns");
+        var teamover = document.getElementById("teamover");
+        var btr1 = document.getElementById("btr1");
+        var btr2 = document.getElementById("btr2");
+        var blr = document.getElementById("blr");
+
+        var count = 0;
+        var currentBatsman = 1; // 1 for btr1, 2 for btr2
+
+        function startMatch() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "");
+            console.log('over started');
+            var btr1r;
+            var btr2r;
+            var btr1b;
+            var btr2b;
+            var blrw;
+            var blrr;
+            var blro;
+
+            xhr.onload = () => {
+                console.log("onload started");
+                var Interval = setInterval(() => {
+                    console.log("interval started");
+
+
+                    if (count === 0) {
+                        btr1r = 0;
+                        btr2r = 0;
+                        btr1b = 0;
+                        btr2b = 0;
+                        blrw = 0;
+                        blrr = 0;
+                        blro = 0;
+                        btr1.value = btr1r + '(' + btr1b + ')';
+                        btr2.value = btr2r + '(' + btr2b + ')';
+                        blr.value = blrw + '-' + blrr + '-' + blro;
+
+                        var addrun = parseInt(Math.floor(Math.random() * 7));
+
+                        teamruns.value = parseInt(addrun) + '/' + parseInt(blrw);
+                        teamover.value = '(0.1)';
+                        btr1.value = parseInt(teamruns.value) + '(1)';
+                        btr2.value = '0(0)';
+                        blrr = parseInt(parseInt(blrr) + parseInt(addrun));
+                        blro = parseInt(parseInt(blro) + parseInt(1));
+                        if (addrun === 0) {
+                            blrw = parseInt(parseInt(blrw) + parseInt(1));
+                            if (currentBatsman === 1) {
+                                currentBatsman = 2;
+                            }
+                            else if (currentBatsman === 2) {
+                                currentBatsman = 1;
+                            }
+                        }
+                        blr.value = parseInt(blrw) + '-' + parseInt(blrr) + '-' + parseInt(blro);
+                        console.log('blrw: ' + blr.value.split('-')[0]);
+                    }
+
+                    else {
+
+                        let tempteamOver = teamover.value;
+                        var tempteamoo = tempteamOver.slice(1, 2);
+                        var tempteamob = tempteamOver.slice(3, 4);
+                        let tempteamrun = teamruns.value.toString();
+                        let tempteamRunArr = tempteamrun.split('/');
+                        var run = parseInt(tempteamRunArr[0]); // Runs
+                        var wicket = parseInt(tempteamRunArr[1]); // Wickets
+                        let tempbtr1r = btr1.value.split('(')[0];
+                        let tempbtr1b = btr1.value.split('(')[1].split(')')[0];
+                        let tempbtr2r = btr2.value.split('(')[0];
+                        let tempbtr2b = btr2.value.split('(')[1].split(')')[0];
+                        let tempblrw = blr.value.split('-')[0];
+                        let tempblrr = blr.value.split('-')[1];
+                        let tempblro = blr.value.split('-')[2];
+
+                        var addrun = parseInt(Math.floor(Math.random() * 7));
+
+                        if (addrun != 0) {
+                            if (addrun === 5 || addrun === 3) {
+                                addrun = 0;
+                            }
+                            if (currentBatsman === 1) {
+                                btr1r = parseInt(parseInt(tempbtr1r) + parseInt(addrun));
+                                btr1b = parseInt(parseInt(tempbtr1b) + parseInt(1));
+                                btr1.value = btr1r + '(' + btr1b + ')';
+                                if (addrun === 1 || addrun === 3 || addrun === 5) {
+                                    currentBatsman = 2; // Change strike
+                                }
+                            } else if (currentBatsman === 2) {
+                                btr2r = parseInt(parseInt(tempbtr2r) + parseInt(addrun));
+                                btr2b = parseInt(parseInt(tempbtr2b) + parseInt(1));
+                                btr2.value = btr2r + '(' + btr2b + ')';
+                                if (addrun === 1 || addrun === 3 || addrun === 5) {
+                                    currentBatsman = 1; // Change strike
+                                }
+                            }
+                            blrr = parseInt(parseInt(tempblrr) + parseInt(addrun));
+                            blro = parseInt(parseInt(tempblro) + parseInt(1));
+                            blr.value = tempblrw + '-' + blrr + '-' + blro;
+                        }
+                        if (addrun === 0) {
+                            wicket = parseInt(parseInt(wicket) + parseInt(1));
+                            blrw = parseInt(parseInt(tempblrw) + parseInt(1));
+                            blrr = parseInt(parseInt(tempblrr) + parseInt(addrun));
+                            blro = parseInt(parseInt(tempblro) + parseInt(1));
+                            blr.value = wicket + '-' + blrr + '-' + blro;
+                            // blr.value = parseInt(wicket) + '-' + parseInt(blr.value.split('-')[1]) + '-' + parseInt(blr.value.split('-')[2]);
+                            console.log('wicket: ' + wicket);
+                            if (currentBatsman === 1) {
+                                currentBatsman = 2; // Change strike
+                            } else if (currentBatsman === 2) {
+                                currentBatsman = 1; // Change strike
+                            }
+                        }
+
+                        teamruns.value = parseInt(parseInt(run) + addrun) + '/' + parseInt(wicket);
+                        teamover.value = '(' + tempteamoo + '.' + (parseInt(tempteamob) + 1) + ')';
+                    }
+
+                    count++;
+                    if (count === 5) {
+                        teamover.value = '(' + (parseInt(tempteamoo) + 1) + '.0)';
+                        clearInterval(Interval);
+                    }
+                }, 4000);
+            }
+
+            xhr.send();
+        }
+    </script>
+
+</body>
+
+</html>
