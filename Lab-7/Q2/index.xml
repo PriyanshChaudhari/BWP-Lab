@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="marksheet.xsl"?>
+<marksheet>
+    <student>
+        <details>
+            <name> ABC </name>
+            <PRN> 12345678 </PRN>
+            <seat> 453210 </seat>
+            <branch> CSE </branch>
+        </details>
+        <markstable>
+            <c1>
+                <Course_Code>CSE1401</Course_Code>
+                <Course_Name>DBMS</Course_Name>
+                <Subject_Type>THY</Subject_Type>
+                <UAMax>80</UAMax>
+                <UAObt>40</UAObt>
+                <IAMax>20</IAMax>
+                <IAObt>10</IAObt>
+                <TMax>100</TMax>
+                <TMin>40</TMin>
+                <TObt>50</TObt>
+                <Result_Status>P</Result_Status>
+            </c1>
+
+            <c1>
+                <Course_Code>CSE1401</Course_Code>
+                <Course_Name>DBMS</Course_Name>
+                <Subject_Type>THY</Subject_Type>
+                <UAMax>80</UAMax>
+                <UAObt>40</UAObt>
+                <IAMax>20</IAMax>
+                <IAObt>10</IAObt>
+                <TMax>100</TMax>
+                <TMin>40</TMin>
+                <TObt>50</TObt>
+                <Result_Status>P</Result_Status>
+            </c1>
+
+            <c1>
+                <Course_Code>CSE1401</Course_Code>
+                <Course_Name>DBMS</Course_Name>
+                <Subject_Type>THY</Subject_Type>
+                <UAMax>80</UAMax>
+                <UAObt>40</UAObt>
+                <IAMax>20</IAMax>
+                <IAObt>10</IAObt>
+                <TMax>100</TMax>
+                <TMin>40</TMin>
+                <TObt>50</TObt>
+                <Result_Status>P</Result_Status>
+            </c1>
+
+            <c1>
+                <Course_Code>CSE1401</Course_Code>
+                <Course_Name>DBMS</Course_Name>
+                <Subject_Type>THY</Subject_Type>
+                <UAMax>80</UAMax>
+                <UAObt>40</UAObt>
+                <IAMax>20</IAMax>
+                <IAObt>10</IAObt>
+                <TMax>100</TMax>
+                <TMin>40</TMin>
+                <TObt>50</TObt>
+                <Result_Status>P</Result_Status>
+            </c1>
+
+            <c1>
+                <Course_Code>CSE1401</Course_Code>
+                <Course_Name>DBMS</Course_Name>
+                <Subject_Type>THY</Subject_Type>
+                <UAMax>80</UAMax>
+                <UAObt>40</UAObt>
+                <IAMax>20</IAMax>
+                <IAObt>10</IAObt>
+                <TMax>100</TMax>
+                <TMin>40</TMin>
+                <TObt>50</TObt>
+                <Result_Status>P</Result_Status>
+            </c1>
+        </markstable>
+        <ed>
+            <UAObt>200</UAObt>
+            <IAObt>50</IAObt>
+            <TMax>500</TMax>
+            <TObt>250</TObt>
+            <Result_Status>Paas</Result_Status>
+        </ed>
+        <ed1>
+            <Percentage>50.00</Percentage>
+            <Class>Second Class</Class>
+        </ed1>
+        <ed2>
+            <Result>Paas</Result>
+        </ed2>
+    </student>
+
+</marksheet>

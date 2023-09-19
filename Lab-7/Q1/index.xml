@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<playersinfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="players.xsd">
+<player>
+    <player-name>Virat Kohli</player-name>
+    <age>33</age>
+    <batting-average>57</batting-average>
+    <highest-score>183</highest-score>
+    </player>
+    <player>
+    <player-name>Hardik Pandya</player-name>
+    <age>28</age>
+    <batting-average>33</batting-average>
+    <highest-score>92</highest-score>
+    </player>
+    <player>
+    <player-name>Jasprit Bumrah</player-name>
+    <age>28</age>
+    <batting-average>6</batting-average>
+    <highest-score>34</highest-score>
+    </player>
+    <player>
+    <player-name>Dinesh Karthik</player-name>
+    <age>37</age>
+    <batting-average>30</batting-average>
+    <highest-score>79</highest-score>
+    </player>
+    <player>
+    <player-name>Ravindra Jadeja</player-name>
+    <age>33</age>
+    <batting-average>32</batting-average>
+    <highest-score>87</highest-score>
+    </player>
+    </playersinfo>

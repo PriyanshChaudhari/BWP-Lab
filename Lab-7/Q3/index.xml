@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="books.xsd">
+    <book>
+        <title>Harry Potter and the Philosopher's Stone</title>
+        <author>J K Rowling</author>
+        <ISBN>978-0439708180</ISBN>
+        <quantity>10</quantity>
+    </book>
+    <book>
+        <title>Harry Potter and the Chamber of Secrets</title>
+        <author>J K Rowling</author>
+        <ISBN>978-0747532743</ISBN>
+        <quantity>15</quantity>
+    </book>
+    <book>
+        <title>Harry Potter and the Prisoner of Azkaban</title>
+        <author>J K Rowling</author>
+        <ISBN>978-0545582889</ISBN>
+        <quantity>8</quantity>
+    </book>
+    <book>
+        <title>Harry Potter and the Order of the Phoenix</title>
+        <author>J K Rowling</author>
+        <ISBN>978-1408855652</ISBN>
+        <quantity>20</quantity>
+    </book>
+    <book>
+        <title>Harry Potter and the Half-Blood Prince</title>
+        <author>J K Rowling</author>
+        <ISBN>978-1338299144</ISBN>
+        <quantity>12</quantity>
+    </book>
+</library>

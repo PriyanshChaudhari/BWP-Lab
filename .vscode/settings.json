@@ -2,6 +2,7 @@
     "files.associations": {
         "CG01.C": "cpp"
     },
-    "editor.fontFamily": "Roboto mono",
-    "css.format.enable": true
+    "editor.fontFamily": "Jetbrains Mono",
+    "css.format.enable": true,
+    "editor.fontSize": 20
 }
