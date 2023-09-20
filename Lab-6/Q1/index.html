@@ -11,12 +11,14 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <style>
-        th, td{
+        th,
+        td {
             text-align: center;
             width: 50%;
         }
+
         .price {
-            border:none;
+            border: none;
             text-align: center;
             background-color: transparent;
         }
@@ -38,13 +40,13 @@
                     <tr>
                         <td class="cname">C1</td>
                         <td>
-                            <input type="text"class="price" disabled></input>
+                            <input type="text" class="price" disabled></input>
                         </td>
                     </tr>
                     <tr>
                         <td class="cname">C2</td>
                         <td>
-                            <input type="text"class="price" disabled></input>
+                            <input type="text" class="price" disabled></input>
                         </td>
                     </tr>
                 </tbody>
@@ -63,16 +65,12 @@
                 var cname = document.querySelectorAll(".cname");
                 let count = 0;
                 const intervalID = setInterval(() => {
-                    for(i=0; i<2;i++){
-                        inputs[i].value = data[`c${i+1}`][count];
-                        if (inputs[i].value > data[`c${i+1}`][count-1] && count>0) {
-                            // inputs[i].style.borderColor = "green";
+                    for (i = 0; i < 2; i++) {
+                        inputs[i].value = data[`c${i + 1}`][count];
+                        if (inputs[i].value > data[`c${i + 1}`][count - 1] && count > 0) {
                             inputs[i].style.color = "green";
-                            // inputs[i].style.backgroundColor = "green";
-                        } else if (inputs[i].value < data[`c${i+1}`][count-1] && count>0){
-                            // inputs[i].style.borderColor = "red";
+                        } else if (inputs[i].value < data[`c${i + 1}`][count - 1] && count > 0) {
                             inputs[i].style.color = "red";
-                            // inputs[i].style.backgroundColor = "red";
                         }
                     };
                     count++;
